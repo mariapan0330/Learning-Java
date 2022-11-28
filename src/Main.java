@@ -16,21 +16,22 @@ public class Main {
 		System.out.println(CodeWarsProblems.findShort("Let's travel abroad shall we")); // 2
 		StringBuilder test = new StringBuilder("12345");
 		System.out.println(test.deleteCharAt(test.length()-1));
+		System.out.println((int)(Math.random()*25));
 		
-//		char myC = 94;
-//		System.out.println(myC);
-//		for (int i = 1; i < 3; i++) {
-//			System.out.println(i);
-//		}
-//		
-//		System.out.println("Please give me a number:");
-//		String guess = scanner.nextLine();
-//		System.out.println(guess);
-//		
-//		guess = scanner.nextLine();
-//		
-//		System.out.println(Integer.parseInt(guess) * 23);
-//		System.out.println("done");
+		if ("t".matches(".*[adjiuet].*")) {
+			System.out.println(true);
+		} else {
+			System.out.println(false);			
+		}
+		
+		System.out.println(Math.sqrt(25));
+		
+		System.out.println("+++++");
+		System.out.println(Arrays.toString(AddToZero.addToZero(5)));
+		System.out.println(Arrays.toString(AddToZero.addToZero(4)));
+		System.out.println(Arrays.toString(AddToZero.addToZero(3)));
+		System.out.println(Arrays.toString(AddToZero.addToZero(6)));
+		System.out.println(Arrays.toString(AddToZero.addToZero(7)));
 		
 		
 	}
