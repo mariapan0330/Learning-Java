@@ -97,6 +97,26 @@ public class CodeWarsProblems {
 	}
 	
 	
+	public static boolean valid10MinuteWalk(char[] walk) {
+		if (walk.length != 10) {
+			return false;
+		}
+		
+		int northCount=0, southCount=0, eastCount=0, westCount=0;
+		for (int i = 0; i < walk.length; i++) {
+			if (walk[i] == 'n') {northCount++;}
+			if (walk[i] == 's') {southCount++;}
+			if (walk[i] == 'e') {eastCount++;}
+			if (walk[i] == 'w') {westCount++;}
+		}
+		
+		return northCount == southCount && eastCount == westCount;
+	}
+	
+	public static void main(String[] args) {
+		System.out.println(valid10MinuteWalk(new char[] {'n','s','n','s','n','s','n','s','n','s'}));
+		System.out.println(valid10MinuteWalk(new char[] {'w','e','n','s','n','s','n','s','n','s'}));
+	}
 	
 }
 
