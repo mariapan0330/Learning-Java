@@ -113,9 +113,37 @@ public class CodeWarsProblems {
 		return northCount == southCount && eastCount == westCount;
 	}
 	
+	public static String makeComplement(String dna) {
+		StringBuilder res = new StringBuilder();
+		
+		for (int i = 0; i < dna.length(); i++) {
+			switch(dna.charAt(i)) {
+			case 'A':
+				res.append('T');
+				break;
+			case 'T':
+				res.append('A');
+				break;
+			case 'C':
+				res.append('G');
+				break;
+			case 'G':
+				res.append('C');
+				break;
+			}
+		}
+		
+		return res.toString();
+	}
+	
+	
+	
+	
 	public static void main(String[] args) {
-		System.out.println(valid10MinuteWalk(new char[] {'n','s','n','s','n','s','n','s','n','s'}));
-		System.out.println(valid10MinuteWalk(new char[] {'w','e','n','s','n','s','n','s','n','s'}));
+//		System.out.println(valid10MinuteWalk(new char[] {'n','s','n','s','n','s','n','s','n','s'}));
+//		System.out.println(valid10MinuteWalk(new char[] {'w','e','n','s','n','s','n','s','n','s'}));
+		System.out.println(makeComplement("TTTT"));
+		System.out.println(makeComplement("TTTT"));
 	}
 	
 }
